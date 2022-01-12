@@ -42,7 +42,7 @@ class MyHomePage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(18.0),
             child: (
-            Text("$index")
+            Text("title - $index")
             ),
           ),
         )
