@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Miscellaneous
 *.class
 *.log
@@ -44,7 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-=======
 # See https://www.dartlang.org/guides/libraries/private-files
 
 # Files and directories created by pub
@@ -52,7 +50,7 @@ app.*.map.json
 .packages
 build/
 # If you're building an application, you may want to check-in your pubspec.lock
-pubspec.lock
+#pubspec.lock
 
 # Directory created by dartdoc
 # If you don't generate documentation locally you can remove this line.
@@ -66,4 +64,3 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
->>>>>>> b7f7c079741433ae13a3c64cd49965bd5008134b
