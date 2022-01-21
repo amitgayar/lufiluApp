@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
+import 'package:lufilu/utils/util_functions.dart';
+
+
 
 void main() {
   runApp(const MyApp());
 }
 
-Logger log = Logger();
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -33,11 +34,13 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return
+      Scaffold(
       appBar: AppBar(
         title: Text(title),
       ),
-      body: ListView(
+      body:
+      ListView(
         children: List.generate(30, (index) => Center(
           child: Padding(
             padding: const EdgeInsets.all(18.0),
@@ -48,6 +51,7 @@ class MyHomePage extends StatelessWidget {
         )
         ),
       ),
+
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
