@@ -7,6 +7,7 @@ import 'package:lufilu/pages/cart_page.dart';
 import 'package:lufilu/pages/home_page.dart';
 import 'package:lufilu/pages/settings_page.dart';
 import 'package:lufilu/utils/util_functions.dart';
+import 'package:lufilu/widgets/my_logo.dart';
 
 
 
@@ -72,12 +73,13 @@ class BaseStructure extends StatelessWidget {
             preferredSize: const Size.fromHeight(100.0),
             child: Container(
                 decoration:   BoxDecoration(
-                color: Colors.red[300]
+                color: Colors.brown[100]
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset('images/lufilu.jpg'),
+                    // Image.asset('images/lufilu.jpg'),
+                    const MyLogo(),
                     Row(
                       children: const [
                         Text('NCR'),
@@ -93,8 +95,13 @@ class BaseStructure extends StatelessWidget {
                       ],
                     ),
                     const Icon(CupertinoIcons.person),
-                    const Icon(CupertinoIcons.shopping_cart),
-                    const Text('A/H'),
+                    const Icon(CupertinoIcons.globe),
+                    IconButton(icon: const Icon(CupertinoIcons.shopping_cart), onPressed: () {
+                      log.w("button CupertinoIcons.globe");
+                      Navigator.push(context, PageRouteBuilder(pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+                        return const CartPage();
+                      }));
+                    },),
                   ],
                 )
             )):PreferredSize(
