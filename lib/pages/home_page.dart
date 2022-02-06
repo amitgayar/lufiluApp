@@ -1,3 +1,4 @@
+import 'package:lufilu/app_constants/app_constants.dart';
 import 'package:lufilu/utils/util_functions.dart';
 
 class HomePage extends StatelessWidget {
@@ -5,16 +6,29 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: List.generate(30, (index) =>
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: (
-                  Text("title - $index")
+    log.v("building.. HomePage");
+    return Container(
+      constraints: const BoxConstraints.expand(),
+      color: ytBlackBody,
+      child:   GridView.count(
+        crossAxisCount: 2,
+        crossAxisSpacing: 10.0,
+        mainAxisSpacing: 10.0,
+        shrinkWrap: true,
+        children: List.generate(20, (index) {
+          return Padding(
+            padding: const EdgeInsets.all(0.0),
+            child: Container(
+              child: FittedBox(child: Text('$index')),
+              padding: const EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                color: ytBlackVideoButtonsGrey,
+                borderRadius:
+                const BorderRadius.all(Radius.circular(4),),
               ),
             ),
-          )
+          );
+        },),
       ),
     );
   }
